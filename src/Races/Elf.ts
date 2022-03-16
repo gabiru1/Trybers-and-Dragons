@@ -1,11 +1,11 @@
 import Race from './Race';
 
-class Dwarf extends Race {
-  protected _maxLifePoints = 80;
+class Elf extends Race {
+  protected _maxLifePoints = 99; // Em que mundo Elfo tem mais life que Orc e Dwarf??????
   protected static instanceOfRace = 0;
   constructor(_name: string, _dexterity: number) {
     super(_name, _dexterity);
-    Dwarf.instanceOfRace += 1;
+    Elf.instanceOfRace += 1;
   }
 
   static createdRacesInstances(): number {
@@ -16,7 +16,7 @@ class Dwarf extends Race {
     return this._maxLifePoints;
   }
 
-  set maxLifePoints(sangue: number) { this._maxLifePoints = sangue; }
+  set maxLifePoints(sangue: number) { this._maxLifePoints = sangue; } // quem nunca falou "sangue" ja nasceu velho
 }
 
-export default Dwarf;
+export default Elf;
